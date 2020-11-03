@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips|Home Page</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" width="35" height="35" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item px-3">
+                    <a class="nav-link" id="current" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="./blog.html"><i class="fa fa-newspaper-o"></i> Blog</a>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-plane fa-lg"></i> Trips
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">2019</a>
+                        <a class="dropdown-item" href="#">2018</a>
+                        <a class="dropdown-item" href="#">2017</a>
+                    </div>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="./contact.html"><i class="fa fa-address-card fa-lg"></i> Contact</a>
+                </li>
+            </ul>
+            <span class="navbar-text ml-auto">
+                <a id="loginLink">
+                    <span class="fa fa-sign-in"></span> Login</a>
+            </span>
+        </div>
+    </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1"
+                                    id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header-carousel -->
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/kullu.jpg" alt="Kullu">
+                <div class="carousel-caption align-self-center">
+                    <h3>Kullu</h3>
+                    <p class="d-none d-md-block ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/manali.jpg" alt="Manali">
+                <div class="carousel-caption ">
+                    <h3>Manali</h3>
+                    <p class="d-none d-md-block">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/kasauli.jpg" alt="Kasauli">
+                <div class="carousel-caption">
+                    <h3>Kasauli</h3>
+                    <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/shimla.jpg" alt="Shimla">
+                <div class="carousel-caption">
+                    <h3>Shimla</h3>
+                    <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/chamba.jpg" alt="Chamba">
+                <div class="carousel-caption ">
+                    <h3>Chamba</h3>
+                    <p class="d-none d-md-block">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div class="container">
+
+        <!-- News card -->
+        <div class="row row-content align-items-center d-none d-sm-block">
+            <div class="media">
+                <img class="d-flex mr-3 col-5" src="images/kalpa.jpg" alt="Kalpa">
+                <div class="media-body col-7">
+                    <h2>Kalpa</h2>
+                    <h4>Untouched beauty in the lap of Himachal Pradesh</h4>
+                    <p class="d-none d-sm-block">Kinnaur Kailash mountain range wrapped in a white sheet of snow,
+                        appeared no less than a fairy tale land.<a
+                            href="https://zeenews.india.com/entertainment/travel/feature/kalpa-untouched-beauty-in-the-lap-of-himachal-pradesh_1831418.htm"><br>Learn
+                            more...</a></p>
+                    <cite title="Source Title">"ZeeNews , Dec 07, 2015"</cite>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs for information -->
+        <div class="row row-content">
+            <div class="col-12 col-sm-7 col-md-9">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#glimpse" role="tab">At a
+                            glimpse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#state" role="tab">State tourism</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#time" role="tab">Best time to visit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tourist" role="tab">Tourist
+                            attractions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#reach" role="tab">How to reach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#around" role="tab">Getting around</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="glimpse" role="tabpanel">The
+                        picturesque state of Himachal Pradesh is nestled between the snow topped Himalayan ranges in
+                        North
+                        India. Known for its spectacular and panoramic landscapes, this traveler's paradise is blessed
+                        with
+                        lofty snow peaks, deep gorges, verdant valleys, thundering rivers, enchanting mountain lakes,
+                        flower
+                        carpeted meadows, ancient temples, and magnificent monasteries steeped in time. Dotted with
+                        numerous
+                        hill stations, Himachal Pradesh proves to be a wonderful location for the tourists who want to
+                        relax
+                        and simply feel rejuvenated. The state also offers amazing opportunities for trekking,
+                        mountaineering, para gliding, skiing, golf , river rafting and ice skating.</div>
+                    <div class="tab-pane fade" id="state" role="tabpanel">
+                        Adventure tourism and pilgrimage tourism are already important aspects of Himachal Pradesh
+                        tourism.
+                        It is now laying greater emphasis on other areas, which include village tourism, history related
+                        tourism, cultural tourism and wildlife tourism.
+                        <br><br>
+                        Himachal Pradesh Tourism has numerous small tourism information centers all across the state,
+                        which
+                        assist tourists with Himachal travel, hotel booking, transportation, shopping, and also provide
+                        other important travel tips. These information centers also provide free Himachal Pradesh maps,
+                        tourism guides, brochures, and travel booklets.
+                        <br><br>
+                        The official website of Himachal tourism provides wholistic information about the state and
+                        offers
+                        instant online hotel reservation for its various hotel properties set in superb locations in the
+                        lap
+                        of nature. The Himachal Pradesh Tourism also arranges sports activities like skiing,
+                        paragliding,
+                        river rafting, trekking, ice-skating and golf besides camping and tenting facilities in
+                        far-flung
+                        tribal areas.</div>
+                    <div class="tab-pane fade" id="time" role="tabpanel" aria-labelledby="time-tab">Himachal Pradesh is
+                        known for its salubrious climate. The ideal time to visit Himachal Pradesh is between the months
+                        of
+                        April to June when weather is mild and sunny and is perfect for mountaineering or enjoying an
+                        idyllic nature walk.</div>
+                    <div class="tab-pane fade" id="tourist" role="tabpanel" aria-labelledby="tourist-tab">Chamba valley,
+                        Spiti valley, Kinnaur, Shimla, Manali, Kullu valley, Lahaul, Kangra valley, Mcleodganj,
+                        Dalhousie,
+                        and Dharamshala Himachal Pradesh travel destination which are dotted with numerous churches,
+                        monasteries, temples, forts and other significant monuments.</div>
+                    <div class="tab-pane fade" id="reach" role="tabpanel" aria-labelledby="reach-tab">
+                        <strong>By Air : </strong> Himachal Pradesh has three airports at Gaggal, Bhuntar and
+                        Jubbarhatti,
+                        which connect the state to Delhi and Chandigarh via regular flights by Indian Airlines,
+                        Kingfisher
+                        Red, MDLR Airlines, and Jagson Airlines.
+                        <br><br>
+                        <strong>By Rail : </strong>Kalka is the most important railway station in Himachal Pradesh. A
+                        narrow-gauge railway track connects Kalka with the capital city, Shimla. The longest railway
+                        line is
+                        from Pathankot in Punjab to Jogindernagar in Himachal Pradesh. There are a few other railway
+                        tracks
+                        also passing through important destinations in the state.
+                        <br><br>
+                        <strong>By Road : </strong> Himachal Pradesh has a very good road network, which connect all
+                        popular
+                        destinations of the state to the major cities of North India. During monsoons, a few roads are
+                        closed in fear of landslides. Himachal Pradesh operates deluxe buses and luxury coaches from all
+                        prime cities of North India.</div>
+                    <div class="tab-pane fade" id="around" role="tabpanel" aria-labelledby="around-tab">
+                        Getting around this hilly state is easy if you have your own transportation, be it a car or
+                        motorcycle.
+                        The State Government buses ply between various destinations in the state are small. They are
+                        driven at a
+                        snail's pace because the vehicular machinery can only do so much, but private operators save the
+                        day for
+                        tourists with many buses and coaches, tours and MUVs.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for information -->
+            <div class="col-12 col-sm col-md">
+                <div class="card">
+                    <h6 class="card-header bg-primary text-white">Himachal Pradesh Info</h6>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-6">Currency</dt>
+                            <dd class="col-6">Indian Rupee</dd>
+                            <dt class="col-6">Population</dt>
+                            <dd class="col-6">6.856 million</dd>
+                            <dt class="col-6">Time Zone</dt>
+                            <dd class="col-6">GMT+5.30 hours</dd>
+                            <dt class="col-6">Area</dt>
+                            <dd class="col-6">55673 km2</dd>
+                            <dt class="col-6">Capital</dt>
+                            <dd class="col-6">Shimla</dd>
+                            <dt class="col-6">Official Language</dt>
+                            <dd class="col-6">Hindi</dd>
+                            <dt class="col-6">Capital's calling code</dt>
+                            <dd class="col-6">+91-177</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>Top Tourist Attractions</h1>
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-last">
+                <h3>Plan a trip to Kullu Today</h3>
+            </div>
+            <div class="col col-sm col-md order-sm-first">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/kullu.jpg" alt="Kullu">
+                    <div class="media-body">
+                        <h2 class="mt-0">Kullu</h2>
+                        <p class="d-none d-sm-block text-justify">Known as the ‘Valley of Gods’, Kullu is a cluster of
+                            beautiful valleys in Himachal Pradesh. Located between the majestic Himalayas and river
+                            Beas, Kullu is situated at an altitude of 1230 m. Kullu, along with Manali, are favorite
+                            hill stations with tourists especially honeymooners. Scenic views and snow-clad mountains,
+                            towering Deodar jungles, rivers and apple orchards have attracted several feature filmmakers
+                            too.<a href="https://www.india.com/travel/kullu/" target="_blank"> Learn more...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-first">
+                <h3>Enjoy peace in the lap of nature</h3>
+            </div>
+            <div class="col col-sm col-md order-sm-last">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Manali</h2>
+                        <p class="d-none d-sm-block text-justify">A mecca for adventure sports enthusiasts, Manali is
+                            situated at 6,398 ft in the Himalayas. Located in the Kullu district of Himachal Pradesh,
+                            its snow covered peaks make it a popular honeymoon destination. Considered the twin town of
+                            Kullu, Manali’s scenic beauty, history and culture give it the sobriquet of the Valley of
+                            the Gods. When hippies flocked the city in the ’60s and ’70s in pursuit of their utopian
+                            dream, Manali became very popular in the west.<a href="https://www.india.com/travel/manali/"
+                                target="_blank"> Learn more...</a> </p>
+                    </div>
+                    <img class="flex-d ml-3 img-thumbnail align-self-center" src="images/manali.jpg" alt="Manali">
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-last">
+                <h3>Enjoy a 4 night stay in Kasauli</h3>
+            </div>
+            <div class="col col-sm col-md order-sm-first">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/kasauli.jpg" alt="Kasauli">
+                    <div class="media-body">
+                        <h2 class="mt-0">Kasauli</h2>
+                        <p class="d-none d-sm-block text-justify">Located at 1927 m above seal level Kasauli is a small
+                            hill station in Himachal Pradesh. It also serves as an army cantonment. Snow-clad mountains,
+                            dense forests and a pleasant climate make Kasauli a major draw among tourist. Established by
+                            the British as a cantonment town in 1842, Kasauli has come a long way since. Located in the
+                            Solan district of Himachal Pradesh, about 77 km from Shimla, you can see the remnants of the
+                            British legacy in the local architecture.<a href="https://www.india.com/travel/kasauli/"
+                                target="_blank"> Learn more...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-first">
+                <h3>The most picturesque town of Himachal</h3>
+            </div>
+            <div class="col col-sm col-md order-sm-last">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Shimla</h2>
+                        <p class="d-none d-sm-block text-justify">Shimla derives its name from Shyamala Devi, an
+                            incarnation of the goddess Kali, whose temple existed in the dense forest covering the Jakhu
+                            Hill in the early 19th century. Shimla is the capital of Himachal Pradesh and was also the
+                            summer capital in pre-Independence India. Covering an area of 25 sq km at a height of 7,238
+                            ft, Shimla is surrounded by pine, deodar and oak forests. Its well developed amenities, easy
+                            reach and various tourist attractions make it one of India’s most popular hill stations. <a
+                                href="https://www.india.com/travel/shimla/" target="_blank"> Learn more...</a> </p>
+                    </div>
+                    <img class="flex-d ml-3 img-thumbnail align-self-center" src="images/shimla.jpg" alt="Shimla">
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-last">
+                <h3>Enjoy stay in the most beautiful hill stations</h3>
+            </div>
+            <div class="col col-sm col-md order-sm-first">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/chamba.jpg" alt="Chamba">
+                    <div class="media-body">
+                        <h2 class="mt-0">Chamba</h2>
+                        <p class="d-none d-sm-block text-justify">The beautiful hill station of Chamba in Himachal
+                            Pradesh is about 55 km from Dalhousie. Established by Raja Sahil Verma in 920 AD, the hamlet
+                            has retained its medieval charm. Along with pleasant climate, the picturesque hill station
+                            offers breathtaking sights of the snow-clad mountains and lush green forests. Chamba serves
+                            as a perfect summer getaway.<a href="https://www.india.com/travel/chamba/" target="_blank">
+                                Learn more...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="banner">
+        <h1 id="heading">Don't miss the opportunity to enjoy a 10-day stay at the lowest prices</h1>
+        <a class="btn btn-light" href="./contact.html" role="button">Contact Us today</a>
+    </section>
+
+    <div class="container">
+        <h1>You May Also Like</h1>
+        <div class="row row-content align-items-center justify-content-center">
+            <div class="col-12 col-sm-4 align-self-center">
+                <img class="img-thumbnail" src="./images/blog1.jpg" alt="Blog">
+                <h5><a href="https://www.experiencetravelgroup.com/blog/2017/06/travel-guide-himachal-pradesh-india/">A
+                        TRAVEL GUIDE TO HIMACHAL PRADESH: BEYOND SHIMLA</a></h5>
+                <p>by Amelia Curran</p>
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+                <img class="img-thumbnail" src="./images/blog2.webp" alt="Blog">
+                <h5><a href="https://www.klook.com/en-IN/blog/places-to-visit-in-himachal/">PLACES TO VISIT HIMACHAL
+                        PRADESH</a></h5>
+                <p>by Klook team</p>
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+                <img class="img-thumbnail" src="./images/blog3.jpg" alt="Blog">
+                <h5><a href="https://www.urbantravelblog.com/info/himachal-pradesh-india/">AN OVERVIEW OF MAGICAL
+                        HIMACHAL PRADESH</a></h5>
+                <p>by Urban Travel Blog</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="row row-content">
+            <div class="offset-1 col-4 col-sm-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./aboutus.html">About</a></li>
+                    <li><a href="./blog.html">Blogs</a></li>
+                    <li><a href="#">Trips</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-7 col-sm-5">
+                <h5>Our Address</h5>
+                <address>
+                    121, Clear Water Bay Road<br>
+                    Clear Water Bay, Kowloon<br>
+                    Himachal Pradesh, India<br>
+                    <i class="fa fa-phone fa-lg"></i> : +852 1234 5678<br>
+                    <i class="fa fa-fax fa-lg"></i> : +852 8765 4321<br>
+                    <i class="fa fa-envelope fa-lg"></i> : <a href="mailto:confusion@food.net">confusion@food.net</a>
+                </address>
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+                <div class="text-center">
+                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                            class="fa fa-google-plus fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                            class="fa fa-facebook fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                            class="fa fa-linkedin fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fa fa-twitter fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                            class="fa fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p>© Copyright 2018 Trips | Himachal Pradesh</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $('#loginLink').click(function(){
+            $('#loginModal').modal('show');
+        });
+    </script>
+</body>
+
+</html>
